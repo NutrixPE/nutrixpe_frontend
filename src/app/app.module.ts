@@ -7,6 +7,7 @@ import { NavbarComponent } from './skeleton/navbar/navbar.component';
 import { FooterComponent } from './skeleton/footer/footer.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { CarouselComponent } from './pages/carousel/carousel.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CarouselComponent } from './pages/carousel/carousel.component';
     NavbarComponent,
     FooterComponent,
     LandingComponent,
-    CarouselComponent
+    CarouselComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
