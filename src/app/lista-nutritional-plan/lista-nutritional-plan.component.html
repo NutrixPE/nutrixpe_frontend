@@ -1,0 +1,27 @@
+<h2>Lista de los Planes Nutricionales</h2>
+<table class="table table-stripped">
+    <thead class ="table-dark">
+        <tr>
+          <th>Id</th>
+          <th>Descripcion</th>
+          <th>objetivo</th>
+          <th>id cliente</th>
+          <th>dia semana</th>
+          <th>desayuno</th>
+          <th>merienda</th>
+          <th>almuerzo</th>
+          <th>cena</th>
+          <th>snack nocturno</th>
+
+        </tr>
+    </thead>
+  <tbody>
+    <tr *ngFor="let nutritional_plan of nutriitional_plan ">
+      <td> {{nutritional_plan.id_objetive}}</td>
+      <td> {{nutritional_plan.plan_name}}</td>
+      <td> {{nutritional_plan.description}}</td>
+      <td> {{nutritional_plan.client_id}}</td>
+
+    </tr>
+  </tbody>
+</table>
