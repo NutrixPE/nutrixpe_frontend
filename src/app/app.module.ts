@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ListaNutritionalPlanComponent } from './lista-nutritional-plan/lista-nutritional-plan.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CrearPlanComponent } from './crear-plan/crear-plan.component';
+import { ObjetivoMpComponent } from './objetivo-mp/objetivo-mp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaNutritionalPlanComponent,
-    CrearPlanComponent
+    CrearPlanComponent,
+    ObjetivoMpComponent
   ],
   imports: [
     BrowserModule,
