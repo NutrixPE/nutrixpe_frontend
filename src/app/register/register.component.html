@@ -1,0 +1,15 @@
+<div *ngIf="showButton">
+  <p>Como te identificas</p>
+  <div class="grid grid-rows-2">
+    <div class="grid mx-4 p-4">
+      <button routerLink="nutritionist" type="submit"
+        class="px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600">
+        Nutricionista</button>
+    </div>
+    <div class="grid mx-4 p-4">
+      <button routerLink="user" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600">
+        Usuario</button>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

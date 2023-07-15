@@ -1,1 +1,41 @@
-<p>login works!</p>
+<form class="mx-4" [formGroup]="loginForm">
+  <div>
+    <p class="text-red-700">{{loginError}}</p>
+    <div class="mb-4">
+      <label for="user" class="block font-semibold mb-2">Nombre de Usuario:</label>
+      <input formControlName="user" type="text" id="user" name="user"
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+      <div *ngIf="user.invalid && (user.dirty || user.touched)" class="text-danger">
+        <div *ngIf="user.errors?.['required']" class="text-red-700">
+          El usuario es requerido.
+        </div>
+      </div>
+    </div>
+    <div class="mb-6">
+      <label for="password" class="block font-semibold mb-2">Contraseña:</label>
+      <input formControlName="password" type="password" id="password" name="password"
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+      <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+        <div *ngIf="password.errors?.['required']" class="text-red-700">
+          La contraseña es requerida.
+        </div>
+      </div>
+    </div>
+    <div class="mb-6">
+      <label for="role" class="block font-semibold mb-2">Rol:</label>
+      <input formControlName="role" type="radio" id="Cliente" name="role" value="Cliente"
+        class="px-4 py-2 border border-gray-300 rounded-lg" required>
+      Cliente
+      <input formControlName="role" type="radio" id="Nutricionista" name="role" value="Nutricionista"
+        class="px-4 py-2 border border-gray-300 rounded-lg" required>
+      Nutricionista
+    </div>
+  </div>
+  <div class="flex items-center justify-between">
+    <button type="submit" (click)="login()"
+      class="px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600">
+      Iniciar Sesion</button>
+    <button routerLink="/register" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600">
+      Regstrarse</button>
+  </div>
+</form>

@@ -12,11 +12,20 @@
       </ul>
     </div>
     <div class="flex items-center order-2 md:order-3">
-      <a href="#" class="text-gray-500 font-semibold hover:text-indigo-400 mr-4">
+      <a *ngIf="!userLoginOn" routerLink="/register"
+        class="text-gray-800 text-sm font-semibold hover:text-indigo-400 mr-4">
         Registrarse
       </a>
-      <button class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2">
-        <span>Iniciar Sesion</span>
+      <a *ngIf="userLoginOn" class="text-gray-800 text-sm font-semibold hover:text-indigo-400 mr-4">
+        Cerrar Sesion
+      </a>
+      <button *ngIf="!userLoginOn" routerLink="/login"
+        class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2">
+        <span *ngIf="!userLoginOn">Iniciar Sesion</span>
+      </button>
+      <button *ngIf="userLoginOn"
+        class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2">
+        <span>Mi Perfil</span>
       </button>
     </div>
   </div>
